@@ -29,11 +29,9 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  ...laneActions,
-  addNote: createNote,
   createLane: createLaneRequest,
 };
 
-export default connect(mapStateToProps)(Kanban);
+export default connect(mapStateToProps, mapDispatchToProps)(Kanban);
 
 
